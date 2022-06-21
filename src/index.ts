@@ -1,6 +1,6 @@
 import { Client, MessageEmbed } from "discord.js";
 
-import config from "./readConfig";
+const config = JSON.parse(String(process.env.config));
 import activities from "./readActivities";
 
 // import hidden from "./hidden";
