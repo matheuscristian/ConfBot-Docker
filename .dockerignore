@@ -8,3 +8,6 @@ LICENSE
 init.bat
 node_modules/
 Dockerfile
+.git
+.gitignore
+config.json

@@ -4,7 +4,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const discord_js_1 = require("discord.js");
-const readConfig_1 = __importDefault(require("./readConfig"));
+const config = JSON.parse(String(process.env.config));
 const readActivities_1 = __importDefault(require("./readActivities"));
 // import hidden from "./hidden";
 const client = new discord_js_1.Client({ intents: ["DIRECT_MESSAGES", "GUILDS", "GUILD_MESSAGES", "GUILD_BANS", "GUILD_MEMBERS"] });
@@ -21,15 +21,15 @@ client.on("messageCreate", (msg) => {
     if (msg.author.bot === true) {
         return;
     } // Verifica se a mensagem não é de um bot
-    else if (!msg.content.startsWith(readConfig_1.default.prefix)) {
+    else if (!msg.content.startsWith(config.prefix)) {
         return;
     }
     ; // Verifica se a mensagem começa com o prefixo
     let commandName = msg.content.split(" ")[0]; // Cria uma variável que contém o comando enviado com o prefixo
     let args = msg.content.split(" "); // Cria variável que contém os parametros do comando
-    commandName = commandName.substring(readConfig_1.default.prefix.length, commandName.length).toLowerCase(); // Retira o prefixo do comando
+    commandName = commandName.substring(config.prefix.length, commandName.length).toLowerCase(); // Retira o prefixo do comando
     let notFound = true;
-    readConfig_1.default.commands.forEach((command) => {
+    config.commands.forEach((command) => {
         if (command.name == commandName) {
             notFound = false;
             command.functions.forEach((val) => {
@@ -42,14 +42,14 @@ client.on("messageCreate", (msg) => {
                         .setTitle("ConfBot Error")
                         .setDescription("> Ocorreu um erro durante a execução do código :disappointed_relieved:. Tente contatar o desenvolvedor deste bot saber a causa do erro. Se você for o desenvolvedor e encontrou um bug, entre na documentação do ConfBot: https://github.com/M4THEWS2/ConfBot/issues e reporte-o.\n ```" + err + "```");
                     msg.reply({ "embeds": [errembed] }); // Envia mensagem de erro
-                    if (readConfig_1.default.printErrOnTerminal) { // Se estiver ativo escreve no terminal o que aconteceu
+                    if (config.printErrOnTerminal) { // Se estiver ativo escreve no terminal o que aconteceu
                         console.log(err);
                     }
                 }
             });
         }
     });
-    notFound ? msg.reply(readConfig_1.default.commandNotFoundMessage) : null;
+    notFound ? msg.reply(config.commandNotFoundMessage) : null;
 });
 // client.login(hidden.token);
 client.login(process.env.token);
