@@ -1,0 +1,25 @@
+{
+  "name": "confbot",
+  "version": "1.0.0",
+  "description": "Um bot configurável para você não ter que se preocupar com códigos difíceis, e coisas demoradas para aprender. Basta configurar este bot e está pronto!!!",
+  "main": "src/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/M4THEWS2/ConfBot.git"
+  },
+  "scripts": {
+    "start": "node dist/",
+    "build": "tsc",
+    "test": "tsc && node dist/"
+  },
+  "author": "M4THEWS",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/M4THEWS2/ConfBot/issues"
+  },
+  "homepage": "https://github.com/M4THEWS2/ConfBot#readme",
+  "dependencies": {
+    "discord.js": "^13.6.0",
+    "typescript": "^4.5.5"
+  }
+}

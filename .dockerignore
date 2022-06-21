@@ -1,0 +1,10 @@
+src/
+assets/
+CODE_OF_CONDUCT.md
+CONTRIBUTING.md
+README.md
+tsconfig.json
+LICENSE
+init.bat
+node_modules/
+Dockerfile
