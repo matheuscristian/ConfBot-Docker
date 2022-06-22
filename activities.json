@@ -1,0 +1,14 @@
+[
+   {
+       "msg": "!help se estiver precisando de ajuda!!",
+       "type": "WATCHING"
+   } ,
+   {
+       "msg": "Este é o ConfBot!!",
+       "type": "PLAYING"
+   },
+   {
+       "msg": "Baixe o ConfBot em: https://github.com/M4THEWS2/ConfBot",
+       "type": "WATCHING"
+   }
+]

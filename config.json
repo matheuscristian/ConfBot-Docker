@@ -1,0 +1,166 @@
+{
+    "token": "",
+    "prefix": "c+!",
+    "commandNotFoundMessage": "Comando não encontrado, verifique se o comando está digitado corretamente ou digite !help para ver se o comando realmente existe.",
+    "printErrOnTerminal": true,
+    "commands": [
+        {
+            "name": "errTemplate",
+            "functions": [
+                {
+                    "name": "errTemplate"
+                }
+            ]
+        },
+        {
+            "name": "help",
+            "functions": [
+                {
+                    "name": "embed",
+                    "embedContent": {
+                        "title": "ConfBot Ajuda",
+                        "description": ">>> Este é o ConfBot!!!\n Para ter mais detalhes sobre a configuração deste bot, acesse: https://github.com/M4THEWS2/ConfBot/"
+                    }
+                }
+            ]
+        },
+        {
+            "name": "performace-test",
+            "functions": [
+                {
+                    "name": "send",
+                    "content": "Test"
+                },
+                {
+                    "name": "send",
+                    "content": "Test"
+                },
+                {
+                    "name": "send",
+                    "content": "Test"
+                },
+                {
+                    "name": "send",
+                    "content": "Test"
+                },
+                {
+                    "name": "send",
+                    "content": "Test"
+                },
+                {
+                    "name": "send",
+                    "content": "Test"
+                },
+                {
+                    "name": "send",
+                    "content": "Test"
+                },
+                {
+                    "name": "send",
+                    "content": "Test"
+                },
+                {
+                    "name": "send",
+                    "content": "Test"
+                },
+                {
+                    "name": "send",
+                    "content": "Test"
+                }
+            ]
+        },
+        {
+            "name": "btn_test",
+            "functions": [
+                {
+                    "name": "button",
+                    "content": "Test content",
+                    "buttons": [
+                        {
+                            "label": "test",
+                            "style": "SUCCESS",
+                            "onPress": {
+                                "name": "send",
+                                "content": "Olá mundo!"
+                            }
+                        },
+                        {
+                            "label": "testing2",
+                            "style": "DANGER",
+                            "onPress": {
+                                "name": "embed",
+                                "embedContent": {
+                                    "title": "ConfBot Ajuda",
+                                    "description": "Você apertou um botão!!"
+                                }
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "ban",
+            "functions": [
+                {
+                    "name": "button",
+                    "content": "Você tem certeza de que quer banir este usuário?",
+                    "buttons": [
+                        {
+                            "label": "Sim",
+                            "style": "DANGER",
+                            "onPress": {
+                                "name": "ban"
+                            }
+                        },
+                        {
+                            "label": "Não",
+                            "style": "SUCCESS",
+                            "onPress": {
+                                "name": "reply",
+                                "content": "Tudo bem!"
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "addstock",
+            "functions": [
+                {
+                    "name": "stock",
+                    "method": "add",
+                    "value": 1
+                },
+                {
+                    "name": "reply",
+                    "content": "Executado!"
+                }
+            ]
+        },
+        {
+            "name": "removestock",
+            "functions": [
+                {
+                    "name": "stock",
+                    "method": "remove",
+                    "value": 1
+                },
+                {
+                    "name": "reply",
+                    "content": "Executado!"
+                }
+            ]
+        },
+        {
+            "name": "liststock",
+            "functions": [
+                {
+                    "name": "stock",
+                    "method": "list"
+                }
+            ]
+        }
+    ]
+}

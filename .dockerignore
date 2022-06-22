@@ -1,0 +1,13 @@
+src/
+assets/
+CODE_OF_CONDUCT.md
+CONTRIBUTING.md
+README.md
+LICENSE
+init.bat
+node_modules/
+Dockerfile
+.git
+.gitignore
+config.json
+build-docker.sh
